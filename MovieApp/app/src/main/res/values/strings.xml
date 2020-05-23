@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="image_description">poster</string>
+    <string name="action_sort">Sort</string>
+    <string name="top_rated_action">Top rated</string>
+    <string name="popular_action">Most popular</string>
+    <string name="favourite_action">Favourites</string>
+</resources>
