@@ -1,12 +1,10 @@
 package com.example.android.movieapp.model;
 
-import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Movie implements Parcelable {
 
@@ -196,7 +194,6 @@ public class Movie implements Parcelable {
         parcel.writeValue(isVideo);
 
     }
-
 
     public final static Parcelable.Creator<Movie> CREATOR = new Parcelable.Creator<Movie>() {
         @Override

@@ -26,14 +26,16 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
     public MoviesViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         context = viewGroup.getContext();
         View view = LayoutInflater.from(context).inflate(R.layout.movies, viewGroup, false);
-        MoviesViewHolder viewHolder = new MoviesViewHolder(view);
-        return viewHolder;
+        return new MoviesViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(MoviesViewHolder holder, int position) {
         String posterPath = movies.get(position).getPosterPath();
-        Picasso.with(context).load(posterPath).into(holder.listItemNumberView);
+        Picasso.with(context).load(posterPath)
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.noimage)
+                .into(holder.listItemNumberView);
     }
 
     @Override
@@ -44,7 +46,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MoviesViewHo
     public class MoviesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final ImageView listItemNumberView;
 
-        public MoviesViewHolder(View itemView) {
+        MoviesViewHolder(View itemView) {
             super(itemView);
             listItemNumberView = (ImageView) itemView.findViewById(R.id.iv_movie_poster);
             itemView.setOnClickListener(this);

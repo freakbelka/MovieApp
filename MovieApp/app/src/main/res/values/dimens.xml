@@ -2,4 +2,11 @@
 <resources>
 
     <dimen name="item_offset">0dp</dimen>
+    <dimen name="outerPadding">16dp</dimen>
+    <dimen name="innerPadding">8dp</dimen>
+    <dimen name="posterWidth">200dp</dimen>
+    <dimen name="posterHeight">300dp</dimen>
+    <dimen name="largeText">22sp</dimen>
+    <dimen name="mediumText">20sp</dimen>
+    <dimen name="pgSide">42dp</dimen>
 </resources>

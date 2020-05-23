@@ -1,59 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_movie_title"
+            style="@style/boldTextViewStyle"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/outerPadding"
+            android:textSize="@dimen/largeText" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_poster"
+                android:layout_width="@dimen/posterWidth"
+                android:layout_height="@dimen/posterHeight"
+                android:contentDescription="@string/movie_poster"
+                android:padding="@dimen/outerPadding" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/iv_poster"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/image_description" />
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/innerPadding"
+                    android:paddingTop="@dimen/outerPadding"
+                    android:paddingRight="@dimen/innerPadding"
+                    android:paddingBottom="@dimen/innerPadding">
 
                     <TextView
-                        android:id="@+id/tv_movie_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/boldTextViewStyle"
+                        android:text="@string/release_date" />
 
                     <TextView
                         android:id="@+id/tv_release_date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/textViewStyle"
+                        android:paddingStart="@dimen/innerPadding"
+                        android:paddingLeft="@dimen/innerPadding"
+                        tools:ignore="RtlSymmetry" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/innerPadding"
+                    android:paddingRight="@dimen/innerPadding"
+                    android:paddingBottom="@dimen/innerPadding">
 
                     <TextView
-                        android:id="@+id/tv_rate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        style="@style/boldTextViewStyle"
+                        android:text="@string/user_rating" />
 
+                    <TextView
+                        android:id="@+id/tv_user_rating"
+                        style="@style/textViewStyle"
+                        android:paddingStart="@dimen/innerPadding"
+                        android:paddingLeft="@dimen/innerPadding"
+                        tools:ignore="RtlSymmetry" />
                 </LinearLayout>
             </LinearLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/outerPadding"
+            android:paddingLeft="@dimen/outerPadding"
+            android:paddingTop="@dimen/innerPadding"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                style="@style/boldTextViewStyle"
+                android:paddingBottom="@dimen/innerPadding"
+                android:text="@string/plot_synopsis"
+                android:textSize="@dimen/mediumText" />
+
             <TextView
                 android:id="@+id/tv_movie_overview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                style="@style/textViewStyle" />
 
         </LinearLayout>
-    </ScrollView>
-</FrameLayout>
+    </LinearLayout>
+</ScrollView>

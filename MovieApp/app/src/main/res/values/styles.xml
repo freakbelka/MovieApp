@@ -15,4 +15,14 @@
         <item name="android:background">?android:attr/actionBarItemBackground</item>
         <item name="android:contentDescription">Sort action</item>
     </style>
+
+    <style name="textViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="boldTextViewStyle" parent="textViewStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

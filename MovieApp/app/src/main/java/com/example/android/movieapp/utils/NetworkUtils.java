@@ -20,15 +20,11 @@ public class NetworkUtils {
     private final static String API_KEY = ""; // TODO: remove before commit
     private final static String API_BASE_URL = "https://api.themoviedb.org/";
     private final static String VERSION = "3";
-    private final static String GET_MOVIES_PATH = "movie";
-    private final static String GET_POPULAR_MOVIES_PATH = "popular";
 
-    public static URL buildUrl(String path) {
+    private static URL buildUrl(String path) {
 
         Uri builtUri = Uri.parse(API_BASE_URL).buildUpon()
                 .encodedPath(VERSION + path)
-//                .appendPath(GET_MOVIES_PATH)
-//                .appendPath(GET_POPULAR_MOVIES_PATH)
                 .appendQueryParameter("api_key", API_KEY)
                 .build();
 
@@ -51,7 +47,7 @@ public class NetworkUtils {
      * @return The contents of the HTTP response.
      * @throws IOException Related to network and stream reading
      */
-    public static String getResponseFromHttpUrl(URL url) throws IOException {
+    private static String getResponseFromHttpUrl(URL url) throws IOException {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         try {
             InputStream in = urlConnection.getInputStream();
@@ -81,6 +77,7 @@ public class NetworkUtils {
 
         } catch (Exception e) {
             e.printStackTrace();
+            Log.e(TAG, "Make request " + e.getMessage(), e);
             return null;
         }
     }

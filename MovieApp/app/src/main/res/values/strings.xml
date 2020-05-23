@@ -5,4 +5,10 @@
     <string name="top_rated_action">Top rated</string>
     <string name="popular_action">Most popular</string>
     <string name="favourite_action">Favourites</string>
+    <string name="error_message">Failed to get results. Please try again.</string>
+    <string name="movie_poster_as_a_background">Movie poster as a background</string>
+    <string name="movie_poster">Movie poster</string>
+    <string name="release_date">Release date:</string>
+    <string name="user_rating">User rating:</string>
+    <string name="plot_synopsis">Plot synopsis</string>
 </resources>

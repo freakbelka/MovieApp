@@ -11,12 +11,6 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/favourite_action"
-        android:icon="@color/colorAccent"
-        android:title="@string/favourite_action"
-        app:showAsAction="never" />
-
-    <item
         android:id="@+id/popular_action"
         android:icon="@color/colorAccent"
         android:title="@string/popular_action"
